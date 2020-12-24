@@ -4,7 +4,7 @@
   "description": "React integration for Baobab.",
   "main": "./index.js",
   "scripts": {
-    "prepublish": "babel ./src --out-dir dist-modules",
+    "prepare": "babel ./src --out-dir dist-modules",
     "lint": "eslint ./src",
     "test": "mocha -R spec --require ./test/setup.js --compilers jsx:babel-register ./test",
     "build": "npm run build-mixins && npm run build-higher-order && npm run build-hooks",
