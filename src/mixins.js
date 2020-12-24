@@ -81,7 +81,7 @@ const BranchMixin = {
   },
 
   // On component mount
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
 
     // Creating dispatcher
     this.dispatch = (fn, ...args) => fn(this.context.tree, ...args);
@@ -108,7 +108,7 @@ const BranchMixin = {
   },
 
   // On new props
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     if (!this.__watcher || typeof this.__cursorsMapping !== 'function')
       return;
 
